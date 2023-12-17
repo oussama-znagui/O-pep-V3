@@ -1,5 +1,5 @@
 <?php
-include 'config.php'
+
 
 ?>
 
@@ -12,7 +12,7 @@ include 'config.php'
     <title>Creer un compte</title>
 </head>
 <body>
-    <header class ='h-screen bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-green-200 to-green-500  flex justify-center items-center p-10 flex-col  '>
+    <header class ='h-auto py-10 bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-green-200 to-green-500  flex justify-center items-center p-10 flex-col  '>
         <h1 class ='text-lg font-black text-white text-center my-5 lg:text-2xl'>
             Rejoignez notre Jardin Vert: Inscrivez-vous pour Cultiver des Moments de Beauté Botanique
         </h1>
@@ -50,6 +50,15 @@ include 'config.php'
         Confirmez le mot de pass
       </label>
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************" name="cpass">
+    </div>
+    <div class="w-full ">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        Choisir votre role
+      </label>
+      <select class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"   name="role">
+        <option value="admin">Admin</option>
+        <option value="client">Client</option>
+      </select>
     </div>
     <div class="w-full  flex justify-center items-center">
       <input class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded " value="Valider" type="submit" id = 'go' name = 'go'>    
