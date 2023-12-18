@@ -1,5 +1,6 @@
 <?php
 include '../config.php';
+
 class user {
     private $id_user;
     private $name;

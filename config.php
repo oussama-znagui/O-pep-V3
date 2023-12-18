@@ -6,10 +6,10 @@ define("db","opep_v2");
 
 
     class Db{
-        private $host ;
-        private $user ; 
-        private $pass ;
-        private $db ;
+        private $host;
+        private $user; 
+        private $pass;
+        private $db;
 
 
         public function __construct(){
