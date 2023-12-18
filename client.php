@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'config.php';
-if($_SESSION['user']['role'] != 'client'){
+if($_SESSION['user']['Role'] != 'client'){
   header("Location: index.php");
 }
 
@@ -53,7 +53,7 @@ if($_SESSION['user']['role'] != 'client'){
 
     
     <div class="relative flex items-center">
-        <span class="mx-10"><?php echo "Bonjour " . $_SESSION['pnom']." ".$_SESSION['nom']  ?></span>
+        <span class="mx-10"><?php echo "Bonjour " . $_SESSION['user']['nom']  ?></span>
      
      <div tabsindex="0" class="group relative inline-block p-5">
                     <button
