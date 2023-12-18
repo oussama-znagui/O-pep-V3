@@ -48,6 +48,15 @@ class user {
         }
     }
 
+    public function login($email,$pass){
+        $sql  = db::connexion()->prepare("SELECT * from utilisateur where email = :mail AND passwordUser = :pass");
+        $sql->bindParam(":mail",$email);
+        $sql->bindParam(":pass",$pass);
+        $sql->execute();
+        $result = $sql->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     
 
    

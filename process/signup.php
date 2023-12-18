@@ -33,10 +33,6 @@ if($pass != $cpass){
     else{
         die("l'email que vous avez saisi existe deja");
     }
-   
-     
-   
-
 }
 
 
