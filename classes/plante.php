@@ -6,7 +6,7 @@ class  plante {
         private $prix;
         private $image;
         private $idCategorie;
-        // private Categorie $categorie;
+        private Categorie $categorie;
 
         public function __construct($idp,$n,$p,$i,$idc){
             $this->idPlante = $idp;
@@ -32,13 +32,14 @@ class  plante {
     }
 
     public static function getPlants(){
-        $sql = Db::connexion()->query('SELECT * from plante ');
+        $sql = Db::connexion()->query('SELECT * from plante Join categorie where plante.idCategorie = categorie.idCategorie');
         $sql->execute();
         $result = $sql->fetchAll(PDO::FETCH_ASSOC);
         $arrayPlants = array();
         
         foreach($result as $row){
             $p = new plante($row['idPlante'],$row['nom'],$row['prix'],$row['image'],$row['idCategorie']);
+            
             // $p->__set('idPlante',$row['idPlante']);
             //  $p->__set('nom',$row['nom']);
             //   $p->__set('prix',$row['prix']);
@@ -57,3 +58,5 @@ class  plante {
     }
   
     }
+
+

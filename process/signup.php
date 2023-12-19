@@ -28,7 +28,7 @@ if($pass != $cpass){
     if($newUSer->checkEmail($email)){
         $newUSer->signup($nom,$email,$pass,$role);
         $newUSer->setInfo($nom,$email,$pass,$role);
-            header('Location: ../login.php');
+            header('Location: ../login.php');   
     }
     else{
         die("l'email que vous avez saisi existe deja");

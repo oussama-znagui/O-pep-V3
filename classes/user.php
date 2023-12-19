@@ -1,5 +1,5 @@
 <?php
-include '../config.php';
+// include '../config.php';
 
 class user {
     private $id_user;
@@ -62,8 +62,6 @@ class user {
 
    
 }
-
-
 
 
 
