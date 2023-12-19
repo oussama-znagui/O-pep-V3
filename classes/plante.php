@@ -32,7 +32,7 @@ class  plante {
     }
 
     public static function getPlants(){
-        $sql = Db::connexion()->query('SELECT * from plante');
+        $sql = Db::connexion()->query('SELECT * from plante ');
         $sql->execute();
         $result = $sql->fetchAll(PDO::FETCH_ASSOC);
         $arrayPlants = array();
@@ -49,6 +49,11 @@ class  plante {
         }
        
         return $arrayPlants;
+    }
+
+    public static function filtrer($idc){
+        $sql = db::connexion()->query("SELECT * from plante where idCategorie = $idc");
+
     }
   
     }

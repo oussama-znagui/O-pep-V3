@@ -168,7 +168,6 @@ if($_SESSION['user']['Role'] != 'client'){
     <?php
     $a = array();
     $a = plante::getPlants();
-    print_r($a);
     foreach($a as $row){
         
     ?>
