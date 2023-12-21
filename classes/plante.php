@@ -17,6 +17,10 @@ class  plante {
 
 
     }
+    ajouterPlante(){
+        $sql = db::connexion()->prepare("INSERT into plante (nom,prix,image,idCategorie) VALUES (nom,prix,image,idCategorie)");
+        $sql->bindParam()
+    }
 
     public function __set($property, $value) {
         if (property_exists($this, $property)) {
