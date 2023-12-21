@@ -1,5 +1,5 @@
 <?php
-    //  include '../config.php';
+     include '../config.php';
 class  plante {
         private $idPlante;
         private $nom;
@@ -17,9 +17,13 @@ class  plante {
 
 
     }
-    ajouterPlante(){
-        $sql = db::connexion()->prepare("INSERT into plante (nom,prix,image,idCategorie) VALUES (nom,prix,image,idCategorie)");
-        $sql->bindParam()
+    public function ajouterPlante(){
+        $sql = db::connexion()->prepare("INSERT into plante (nom,prix,image,idCategorie) VALUES (:nom,:prix,:image,:idCategorie)");
+        $sql->bindParam(":nom",$this->nom);
+        $sql->bindParam(":prix",$this->prix);
+        $sql->bindParam(":image",$this->image);
+        $sql->bindParam(":idCategorie",$this->idCategorie);
+        $sql->execute();
     }
 
     public function __set($property, $value) {
@@ -61,6 +65,10 @@ class  plante {
 
     }
   
-    }
+}
+
+$p = new plante(NULL,"aa",12,"azaz.jpeg",3);
+// $p->ajouterPlante();
+
 
 
